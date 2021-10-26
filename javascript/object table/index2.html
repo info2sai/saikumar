@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home work</title>
+    <script src="./data.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <table border="1">
+        <thead id="thead">
+            <th>Id</th>
+            <th>Last-Name</th>
+            <th>City</th>
+            <th>User-Name</th>
+            <th>Image</th>
+        </thead>
+
+        <tbody id="tbody">
+            <tr>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+<script>
+    let table = document.getElementById("tbody");
+    var i = 0;
+    while(i<=contacts.length-1){
+         console.log(table);
+        var row = `<tr>
+                        <td>${contacts[i].login.uuid.substr(32)}</td>
+                        <td>${contacts[i].name.last}</td>                   
+                        <td>${contacts[i].location.city}</td>          
+                        <td>${contacts[i].login.username}</td>          
+                        <td>${contacts[i].picture.medium}</td>          
+                    </tr>`
+        table.innerHTML += row;
+        i++
+    }
+</script>
+
+</html>
